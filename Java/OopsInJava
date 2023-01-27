@@ -1,0 +1,190 @@
+//Video no.7,and 8 Inheritance line-3 ,function overloading line-41 , polymorphism line-69 ,Interface line-101, abstraction line-163 
+
+// Inheritance Example 
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+
+
+public class A{
+    //declare a varaible x
+    int x=1;   //varaible , data member , global varaible 
+    
+    public void setX(int a){
+        x=a; //local varaible its scope onlyy inside the method
+    }
+}
+
+public class B extends A{
+    public int getB(){
+        setX(2);
+        return x;
+    }
+}
+
+public class C extends B
+{
+	public static void main (String[] args)
+	{
+		// your code goes here
+		A a=new A();
+		B b=new B();
+		System.out.println(a.x);
+		System.out.println(b.getB());
+	}
+}
+
+
+
+//function overloading 
+
+package Example;
+
+class D1
+{
+     void disp(char c, int num)
+      {
+          System.out.println("I am the first definition of method disp");
+      }
+     void disp(int num, char c)
+      {
+           System.out.println("I am the second definition of method disp");
+      }
+}
+
+class D2 extends D1
+{
+     public static void main(String args[])
+     {
+          D2 obj = new D2();
+          obj.disp('x',51);
+          obj2.disp(52,'y');
+     }
+}
+
+
+
+// Polymorphism 
+
+
+class Animal {
+  public void animalSound() {
+    System.out.println("The animal makes a sound");
+  }
+}
+
+class Pig extends Animal {
+  public void animalSound() {
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Dog extends Animal {
+  public void animalSound() {
+    System.out.println("The dog says: bow wow");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Animal myAnimal = new Animal();  // Create a Animal object
+    Animal myPig = new Pig();  // Create a Pig object
+    Animal myDog = new Dog();  // Create a Dog object
+    myAnimal.animalSound();
+    myPig.animalSound();
+    myDog.animalSound();
+  }
+}
+
+//INTERFACE -- The interface keyword is used to declare an interface
+
+//for example
+public interface NameofInterface
+{
+   //Any number of final , static fields
+   //Any number of abstract method declaration
+}
+
+
+
+interface printable{  
+void print();  
+}  
+class A6 implements printable{  
+public void print(){System.out.println("Hello");}  
+  
+public static void main(String args[]){  
+A6 obj = new A6();  
+obj.print();  
+ }  
+}  
+
+//Interface declaration: by first user  
+interface Drawable{  
+void draw();  
+}  
+//Implementation: by second user  
+class Rectangle implements Drawable{  
+public void draw(){System.out.println("drawing rectangle");}  
+}  
+class Circle implements Drawable{  
+public void draw(){System.out.println("drawing circle");}  
+}  
+//Using interface: by third user  
+class TestInterface1{  
+public static void main(String args[]){  
+Drawable d=new Circle();//In real scenario, object is provided by method e.g. getDrawable()  
+d.draw();  
+}}  
+
+
+interface Printable{  
+void print();  
+}  
+interface Showable extends Printable{  
+void show();  
+}  
+class TestInterface4 implements Showable{  
+public void print(){System.out.println("Hello");}  
+public void show(){System.out.println("Welcome");}  
+  
+public static void main(String args[]){  
+TestInterface4 obj = new TestInterface4();  
+obj.print();  
+obj.show();  
+ }  
+}  
+
+
+
+
+//abstraction in Java ---Data abstraction is the process of hiding certain details and showing only essential information to the user.
+
+
+// Abstract class
+abstract class Animal {
+  // Abstract method (does not have a body)
+  public abstract void animalSound();
+  // Regular method
+  public void sleep() {
+    System.out.println("Zzz");
+  }
+}
+
+// Subclass (inherit from Animal)
+class Pig extends Animal {
+  public void animalSound() {
+    // The body of animalSound() is provided here
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Pig myPig = new Pig(); // Create a Pig object
+    myPig.animalSound();
+    myPig.sleep();
+  }
+}
