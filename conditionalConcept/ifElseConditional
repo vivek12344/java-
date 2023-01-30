@@ -1,0 +1,135 @@
+//HOW TO TAKE INPUT OF ARRAY ELEMENTS
+
+import java.util.Scanner;
+public class ReadInput
+{
+	public static void main(String[] args) {
+		int n;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number of element you want to store: ");
+		n=sc.nextInt();
+		int[] array = new int[n];
+		System.out.println("Enter the Elements: ");
+		for(int i=0;i<n;i++){
+		    array[i]=sc.nextInt();  //take input by user 
+		}
+
+		//printing the elements 
+		System.out.println("Array elements are: ");
+		for(int i=0;i<n;i++){
+		    System.out.print(array[i]);
+		    System.out.print(",");
+		}
+	}
+}
+
+
+//HOW TO TAKE INPUT IN 2D ARRAY ELEMENTS
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		int row,col;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number of rows and column you want to store: ");
+		row=sc.nextInt();
+		col = sc.nextInt();
+		int[][] twoDarray = new int[row][col];
+		System.out.println("Enter the Elements: ");
+		for(int i=0;i<row;i++){
+		    for(int j=0;j<col;j++){
+		        twoDarray[i][j]=sc.nextInt();   //take input by user 
+		    }
+		}
+
+		//printing the elements 
+		System.out.println("You have Entered following 2D array: ");
+		for(int i=0;i<row;i++){
+		    for(int j=0;j<col;j++){
+		        System.out.print(twoDarray[i][j] +" ");
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+
+
+//NESTED LOOP - nested loop is nothing but there is loop inside the another loop
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+
+		for(int i=1;i<=3;i++){
+		    for(int j=1;j<=5;j++){
+		        System.out.println("i value :: "+i+", j value :: "+j);
+		    }
+		    System.out.println("-----------------------------");
+		}
+	}
+}
+
+
+//PRINTING STAR BY USING NESTED LOOP
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+
+		for(int i=1;i<=4;i++){
+		    for(int j=1;j<=i;j++){
+		        System.out.print("*");
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+
+// DO WHILE LOOP
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+
+		int count =1;
+		do{
+		    System.out.println("Number count is: "+count);
+		    count++;
+		}while(count<19);
+	}
+}
+
+
+// UNDERSTANDING OF IF ELSE CONDITION 
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    int testscor =56;
+	    char grade;
+	    if(testscor>=90){
+	        grade='A';
+	    }
+	    else if(testscor>=80 &&testscor<90){
+	        grade='B';
+	    }
+	    else if(testscor>=70 && testscor<80){
+	        grade='C';
+	    }
+	    else if(testscor<70 && testscor>=50){
+	        grade='D';
+	    }
+	    else{
+	        grade='F';
+	    }
+	    System.out.println("You test grade is: " +grade);
+	}
+}
