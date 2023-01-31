@@ -1,0 +1,17 @@
+what is jshell?
+.Tool providing a dynamic interaction with java programming language
+. Read-Evaluate-Print Loop(REPL) for the java platform
+ -- Type in a snippet of java code , see the results
+.Deeply integrated with JDK tool-set
+-- stay current and compatible 
+.Also , an API for use within other applications
+
+
+what is jshell not?
+
+.Not a new language 
+  --Snippet of pure Java
+  --No new syntax
+. Not a replacement for the compiler
+.Not an IDE
+->Use to make software
